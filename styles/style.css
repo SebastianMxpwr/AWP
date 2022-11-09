@@ -47,79 +47,52 @@ body{
 
   #logo > img{
     position: relative;
-    top: 25% ;
-    left: 10%
+    top: 5% ;
+    left: 10%;
+    height: 80%;
   }
 
 #slide{
-  width: 100vw;
-  height: 250px;
-  background-image: url(../images/halo.jpg);
+  width: 100%;
+  height: 80vh;
+  background-image: url(../images/slide.jpg);
   background-size: cover;
   background-attachment: fixed;
+  filter: grayscale(50%);
 
 }
 
-#slide>p{
+.texto-slide{
+  text-align: left;
+  margin: 5% 5%;
   position: absolute;
-  left: 45%;
-  color:antiquewhite;
-  font-size: 50px;
-  transform: translateY(50%);
+}
+.texto-slide>p{
+  color:#f2f2f2;
+  font-size: 25px;
+ 
+}
+
+.texto-slide>h1{
+  color: #f2f2f2;
+  font-size: 70px;
+}
+
+.texto-slide>h3{
+  color: #f2f2f2;
+  font-size: 30px;
 }
 
 
 #container{
-  width: 100vw;
+  width: 100%;
   height: 100%;
 }
 
-#servicios{
-  width: 100vw;
-  display: inline-flex;
-  gap: 10%;
-  margin-bottom: 50px;
-  flex-wrap: wrap;
-  justify-content: center;
 
-}
-
-.servicio{
-  margin-left: 20px;
-  height: 200px;
-  width: 300px;
-  border: 1px solid rgb(126, 126, 126);
-  background:rgb(2, 3, 26);
-  border-radius: 10px;
-  padding:5px;
-  transition: 0.3s;
-
-}
-
-.servicio:hover{
-  transform:  translateX(6px);
-  box-shadow: 0px 13px 18px 0px rgba(191,191,191,0.75);
-
-}
-
-.servicio > img{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 50px;
-  max-height: 50px;
-  
-}
-
-.servicio > p{
-  font-size: 14px;
-  margin-left: 5px;
-  color: rgb(196, 196, 196);
-  text-align: center;
-}
 
 #videos{
-  width: 100vw;
+  width: 100%;
   margin: auto;
   display: inline-flex;
   flex-wrap: wrap;
@@ -180,7 +153,7 @@ footer>p{
   margin: 0px 10% 30px 10%
 }
 
-h1{
+#container>h1{
   text-align: center;
   color:antiquewhite;
 }
@@ -189,6 +162,7 @@ hr{
   width: 30%;
   margin: auto;
 }
+
 
 
 @media(max-width:750px){
@@ -202,4 +176,54 @@ hr{
     left: 100%
   }
 }
+
+.carousel_history{
+  position: relative;
+  margin: 0 20px;
+
+}
+.carousel__item{
+  height: 400px;
+  background: grey;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  font-size: 2em;
+  color: #fff;
+  display: none;
+  border-radius: 30px;
+}
+
+.carousel__item >img{
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  border-radius: 30px;
+}
+
+.carousel_item-selected{
+  display: block;
+}
+
+.carousel_nav{
+  margin: 10px 30%;
+  background: #2f2f32;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.carousel_button{
+  width:15px;
+  height: 15px;
+  display: inline-block;
+  background: rgb(2, 3, 26);
+  border-radius: 50%;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.carousel_button-selected{
+  background: rgb(196, 196, 196);
+}
+
+
 
