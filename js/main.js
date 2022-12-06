@@ -1,3 +1,8 @@
+if(navigator.serviceWorker){
+    console.log('podemos usar esta shit');
+    navigator.serviceWorker.register('sw.js')
+} 
+
 document.querySelectorAll(".carousel-history").forEach(carousel=>{
     const items = carousel.querySelectorAll(".carousel__item")
     items.forEach((item, i)=>{
